@@ -10,6 +10,8 @@
 		690FEC5C253BDA4D004FCA43 /* CountryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690FEC52253BDA4D004FCA43 /* CountryKit.framework */; };
 		690FEC61253BDA4D004FCA43 /* CountryKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690FEC60253BDA4D004FCA43 /* CountryKitTests.swift */; };
 		690FEC63253BDA4D004FCA43 /* CountryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 690FEC55253BDA4D004FCA43 /* CountryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69AB2642253BDB4F00E59679 /* country-phone-number-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = 69AB2641253BDB4F00E59679 /* country-phone-number-codes.json */; };
+		69AB2648253BDB7600E59679 /* CountryKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AB2647253BDB7600E59679 /* CountryKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		690FEC5B253BDA4D004FCA43 /* CountryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		690FEC60253BDA4D004FCA43 /* CountryKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryKitTests.swift; sourceTree = "<group>"; };
 		690FEC62253BDA4D004FCA43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69AB2641253BDB4F00E59679 /* country-phone-number-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "country-phone-number-codes.json"; sourceTree = "<group>"; };
+		69AB2647253BDB7600E59679 /* CountryKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				690FEC55253BDA4D004FCA43 /* CountryKit.h */,
+				69AB2641253BDB4F00E59679 /* country-phone-number-codes.json */,
 				690FEC56253BDA4D004FCA43 /* Info.plist */,
+				69AB2647253BDB7600E59679 /* CountryKit.swift */,
 			);
 			path = CountryKit;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 				TargetAttributes = {
 					690FEC51253BDA4D004FCA43 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 					690FEC5A253BDA4D004FCA43 = {
 						CreatedOnToolsVersion = 12.0;
@@ -177,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69AB2642253BDB4F00E59679 /* country-phone-number-codes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69AB2648253BDB7600E59679 /* CountryKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -326,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +350,7 @@
 		690FEC67253BDA4D004FCA43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77L3Y6QAZL;
@@ -357,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.CountryKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +376,7 @@
 		690FEC68253BDA4D004FCA43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 77L3Y6QAZL;
@@ -389,6 +401,7 @@
 		690FEC6A253BDA4D004FCA43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77L3Y6QAZL;
 				INFOPLIST_FILE = CountryKitTests/Info.plist;
@@ -407,6 +420,7 @@
 		690FEC6B253BDA4D004FCA43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77L3Y6QAZL;
 				INFOPLIST_FILE = CountryKitTests/Info.plist;
