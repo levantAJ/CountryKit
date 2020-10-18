@@ -67,5 +67,5 @@ CountrySource().allCountries { result in
 
 ## Licenses
 
-All source code is licensed under the [MIT License](https://raw.githubusercontent.com/levantAJ/CountryKit/master/LICENSE).
+All source code is licensed under the [MIT License](https://raw.githubusercontent.com/levantAJ/CountrySource/master/LICENSE).
 
