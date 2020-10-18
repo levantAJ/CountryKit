@@ -1,9 +1,9 @@
-[![Pod Version](https://cocoapod-badges.herokuapp.com/v/CountryKit/badge.png)](http://cocoadocs.org/docsets/CountryKit/)
-[![Pod Platform](https://cocoapod-badges.herokuapp.com/p/CountryKit/badge.png)](http://cocoadocs.org/docsets/CountryKit/)
-[![Pod License](https://cocoapod-badges.herokuapp.com/l/CountryKit/badge.png)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Pod Version](https://cocoapod-badges.herokuapp.com/v/CountrySource/badge.png)](http://cocoadocs.org/docsets/CountrySource/)
+[![Pod Platform](https://cocoapod-badges.herokuapp.com/p/CountrySource/badge.png)](http://cocoadocs.org/docsets/CountrySource/)
+[![Pod License](https://cocoapod-badges.herokuapp.com/l/CountrySource/badge.png)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-# CountryKit
-List of all countries in the world (name, code, phone code)
+# CountrySource
+Provides list of all countries in the world (name, code, phone code) & determine current country.
 
 <img src="https://user-images.githubusercontent.com/6329656/96357601-3b870300-1128-11eb-9091-f98cf9a93924.jpeg" width="300"> <img src="https://user-images.githubusercontent.com/6329656/96357606-4e99d300-1128-11eb-9eee-2d889ca0ed60.jpeg" width="300">
 
@@ -17,7 +17,7 @@ List of all countries in the world (name, code, phone code)
 ### Installation with CocoaPods
 
 ```ruby
-pod 'CountryKit', '1.0'
+pod 'CountrySource', '1.0'
 ```
 
 ### Build Project
@@ -28,13 +28,13 @@ community can help you solve it.
 ## How to use:
 
 ```swift
-import CountryKit
+import CountrySource
 ```
 
 #### Get current country:
 
 ```swift
-countryKit.currentCountry { result in
+CountrySource().currentCountry { result in
     switch result {
     case .success(let country):
         print(country.code, country.name, country.dialCode)
@@ -46,7 +46,7 @@ countryKit.currentCountry { result in
 #### Get all countries
 
 ```swift
-CountryKit().allCountries { result in
+CountrySource().allCountries { result in
     switch result {
     case .success(let countries):
         print(countries)

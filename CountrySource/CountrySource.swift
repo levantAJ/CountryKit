@@ -1,17 +1,17 @@
 //
-//  CountryKit.swift
-//  CountryKit
+//  CountrySource.swift
+//  CountrySource
 //
 //  Created by Tai Le on 10/18/20.
 //
 
 import Foundation
 
-open class CountryKit {
+open class CountrySource {
     public init() {}
 }
 
-public extension CountryKit {
+public extension CountrySource {
     func currentCountry(completion: ((Result<Country, Error>) -> Void)?) {
         allCountries { (result) in
             switch result {
@@ -20,7 +20,7 @@ public extension CountryKit {
                 if let country = countries.first(where: { $0.code == regionCode }) {
                     completion?(.success(country))
                 } else {
-                    completion?(.failure(CountryKitError.notFound))
+                    completion?(.failure(CountrySourceError.notFound))
                 }
             case .failure(let error):
                 completion?(.failure(error))
@@ -31,7 +31,7 @@ public extension CountryKit {
     func allCountries(completion: ((Result<[Country], Error>) -> Void)?) {
         DispatchQueue.global().async {
             do {
-                let bundle = Bundle(for: CountryKit.self)
+                let bundle = Bundle(for: CountrySource.self)
                 guard let path = bundle.path(forResource: "country-phone-number-codes", ofType: "json") else { return }
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let countries = try JSONDecoder().decode([Country].self, from: data)
@@ -47,7 +47,7 @@ public extension CountryKit {
     }
 }
 
-public enum CountryKitError: Int, Error {
+public enum CountrySourceError: Int, Error {
     case notFound = 1000
 
     var localizedDescription: String {
