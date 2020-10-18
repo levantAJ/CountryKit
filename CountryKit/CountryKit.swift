@@ -8,6 +8,10 @@
 import Foundation
 
 open class CountryKit {
+    public init() {}
+}
+
+public extension CountryKit {
     func currentCountry(completion: ((Result<Country, Error>) -> Void)?) {
         allCountries { (result) in
             switch result {
@@ -54,8 +58,8 @@ public enum CountryKitError: Int, Error {
     }
 }
 
-struct Country: Codable, Equatable {
-    var name: String
-    var dialCode: String
-    var code: String
+public struct Country: Codable, Equatable {
+    public var name: String
+    public var dialCode: String
+    public var code: String
 }
