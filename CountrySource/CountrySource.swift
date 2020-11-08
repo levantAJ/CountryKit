@@ -49,8 +49,10 @@ public extension CountrySource {
 
 public enum CountrySourceError: Int, Error {
     case notFound = 1000
+}
 
-    var localizedDescription: String {
+extension CountrySourceError: LocalizedError {
+    public var errorDescription: String? {
         switch self {
         case .notFound:
             return NSLocalizedString("Not found", comment: "")

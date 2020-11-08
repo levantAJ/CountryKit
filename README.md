@@ -17,7 +17,7 @@ Provides list of all countries in the world (name, code, phone code) & determine
 ### Installation with CocoaPods
 
 ```ruby
-pod 'CountrySource', '1.1'
+pod 'CountrySource', '1.2'
 ```
 
 ### Build Project

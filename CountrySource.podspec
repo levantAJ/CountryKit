@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CountrySource'
-  s.version = '1.1'
+  s.version = '1.2'
   s.summary = 'CountrySource provides list of all countries in the world.'
   s.description = <<-DESC
   CountrySource written on Swift 5.0 by levantAJ
